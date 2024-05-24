@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>SSTimer</title>
+</head>
+<body>
+    <div id="content">
+        <input type="text" maxlength="15" id="champ1Text">
+        <img src="./assets/flash.png" id="champ1Img" width="40">
+        <img src="./assets/ghost.png" id="champ1Img2" width="40">
+        <p id="champ1ImgTime">000</p>
+        <p id="champ1Img2Time">000</p>
+        
+        <input type="text" maxlength="15" id="champ2Text">
+        <img src="./assets/flash.png" id="champ2Img" width="40">
+        <img src="./assets/ghost.png" id="champ2Img2" width="40">
+        <p id="champ2ImgTime">000</p>
+        <p id="champ2Img2Time">000</p>
+
+        <input type="text" maxlength="15" id="champ3Text">
+        <img src="./assets/flash.png" id="champ3Img" width="40">
+        <img src="./assets/ghost.png" id="champ3Img2" width="40">
+        <p id="champ3ImgTime">000</p>
+        <p id="champ3Img2Time">000</p>
+
+        <input type="text" maxlength="15" id="champ4Text">
+        <img src="./assets/flash.png" id="champ4Img" width="40">
+        <img src="./assets/ghost.png" id="champ4Img2" width="40">
+        <p id="champ4ImgTime">000</p>
+        <p id="champ4Img2Time">000</p>
+
+        <input type="text" maxlength="15" id="champ5Text">
+        <img src="./assets/flash.png" id="champ5Img" width="40">
+        <img src="./assets/ghost.png" id="champ5Img2" width="40">
+        <p id="champ5ImgTime">000</p>
+        <p id="champ5Img2Time">000</p>
+
+        <div id="spell-selector">
+            <div class="images">
+                <img id="barrier-selector" src="./assets/barrier.png" width="35">
+                <img id="cleanse-selector" src="./assets/cleanse.png" width="35">
+                <img id="exhaust-selector" src="./assets/exhaust.png" width="35">
+                <img id="flash-selector" src="./assets/flash.png" width="35">
+                <img id="ghost-selector" src="./assets/ghost.png" width="35">
+                <img id="heal-selector" src="./assets/heal.png" width="35">
+                <img id="ignite-selector" src="./assets/ignite.png" width="35">
+                <img id="smite-selector" src="./assets/smite.png" width="35">
+                <img id="teleport-selector" src="./assets/teleport.png" width="35">
+                <img id="exit-selector" src="./assets/letterx.png" width="35">
+            </div>
+        </div>
+
+        <p id="dragarea"><img style="pointer-events: none;" src="./assets/drag.png" alt="drag icon" width="30"></p>
+        <p id="updatestatus"><img style="pointer-events: none;" src="./assets/updateGood.png" alt="update is good" width="30"></p>
+        <p id="increasesize"><img style="pointer-events: none;" src="./assets/zoomin.png" alt="increase size" width="30"></p>
+        <p id="decreasesize"><img style="pointer-events: none;" src="./assets/zoomout.png" alt="decrease size" width="30"></p>
+        <p id="info">Info</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "summonerspelltimer",
+  "productName": "SSTimer",
+  "version": "1.0.0",
+  "description": "Creates a desktop app for timing summoner spells on LoL",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "deRoro_",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^30.0.6"
+  }
+}
