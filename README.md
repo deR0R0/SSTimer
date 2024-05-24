@@ -1,5 +1,7 @@
 # SSTimer
 
+Helps you track champion's summoner spells. :D
+
 Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk size.
 
 # Usage
