@@ -59,6 +59,15 @@ body {
     top: 280px;
     left: 120px;
 }
+#exit {
+    background-color: #FFFFFF;
+    border: solid #FFFFFF 3px;
+    border-radius: 5px;
+    position: absolute;
+    color: black;
+    top: 280px;
+    left: 160px;
+}
 #info {
     background-color: #FFFFFF;
     border: solid #FFFFFF 3px;
@@ -68,6 +77,7 @@ body {
     top: 330px;
     left: 120px;
 }
+
 #champ1Text {
     position: absolute;
     top: 3px;
@@ -99,9 +109,9 @@ body {
     position: absolute;
     top: 1px;
     left: 129px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -117,9 +127,9 @@ body {
     position: absolute;
     top: 1px;
     left: 179px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -154,9 +164,9 @@ body {
     position: absolute;
     top: 61px;
     left: 129px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -175,9 +185,9 @@ body {
     position: absolute;
     top: 61px;
     left: 179px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -212,9 +222,9 @@ body {
     position: absolute;
     top: 121px;
     left: 129px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -233,9 +243,9 @@ body {
     position: absolute;
     top: 121px;
     left: 179px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -270,9 +280,9 @@ body {
     position: absolute;
     top: 181px;
     left: 129px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -291,9 +301,9 @@ body {
     position: absolute;
     top: 181px;
     left: 179px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -328,9 +338,9 @@ body {
     position: absolute;
     top: 241px;
     left: 129px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }
@@ -349,9 +359,9 @@ body {
     position: absolute;
     top: 241px;
     left: 179px;
-    color: black;
+    color: white;
     -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: black;
     opacity: 0;
     pointer-events: none;
 }

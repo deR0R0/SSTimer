@@ -1,5 +1,5 @@
 const path = require('path')
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, ipcMain, BrowserWindow, Menu} = require('electron');
 
 const isDev = process.env.NODE_ENV !== "production"
 const isMac = process.platform === "darwin";
@@ -15,6 +15,8 @@ function createMainWindow() {
         frame: false,
         transparent: true,
         webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
             devTools: false
         }
     });
@@ -28,6 +30,10 @@ app.whenReady().then(() => {
 
     // Remove ugly ahh menu
     Menu.setApplicationMenu(null);
+
+    ipcMain.on("close", () => {
+        app.quit();
+    });
 
     //create just in case :)
     app.on('activate', () => {

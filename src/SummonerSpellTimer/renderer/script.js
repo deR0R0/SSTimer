@@ -1,5 +1,7 @@
-const currentVersion = "1.0.0";
-var statusUpdate = "Checking for Updates"
+const ipc = require("electron").ipcRenderer;
+
+const currentVersion = "1.1.0";
+var statusUpdate = "Checking for Updates..."
 
 var currentTime = "";
 
@@ -88,6 +90,7 @@ const appMover = document.getElementById("dragarea");
 const updateStatus = document.getElementById("updatestatus");
 const sizeIncreaser = document.getElementById("increasesize");
 const sizeDecreaser = document.getElementById("decreasesize");
+const exitButton = document.getElementById("exit");
 const info = document.getElementById("info")
 
 var currentSelectedImg = null;
@@ -95,7 +98,7 @@ var currentSelectedImg = null;
 
 window.onload = function createChampListeners() {
     //Check for Update
-    updateCheck();
+    setTimeout(updateCheck, 3000);
     //Champ 1
     champ1img1.addEventListener("contextmenu", function(coords) {
         popupSpellSelector(coords, "CHAMP1IMG1");
@@ -138,16 +141,19 @@ window.onload = function createChampListeners() {
     sizeDecreaser.addEventListener("mousedown", function() {
         changeSize("Decrease");
     });
+    exitButton.addEventListener("mousedown", function() {
+        ipc.send("close");
+    });
 
     window.addEventListener("mousemove", function(event) {
-        if(event.target != updateStatus && event.target != appMover && event.target != sizeIncreaser && event.target != sizeDecreaser) {
+        if(event.target != updateStatus && event.target != appMover && event.target != sizeIncreaser && event.target != sizeDecreaser && event.target != exitButton) {
             info.style.visibility = "hidden";
         } 
     });
     appMover.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
         info.style.left = "0px";
-        info.innerHTML = "Mover, hold and drag."
+        info.innerHTML = "Mover, hold and drag.";
     });
     updateStatus.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
@@ -157,12 +163,17 @@ window.onload = function createChampListeners() {
     sizeIncreaser.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
         info.style.left = "70px";
-        info.innerHTML = "Zoom In"
+        info.innerHTML = "Zoom In";
     });
     sizeDecreaser.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
         info.style.left = "100px";
-        info.innerHTML = "Zoom Out"
+        info.innerHTML = "Zoom Out";
+    });
+    exitButton.addEventListener("mouseover", function() {
+        info.style.visibility = "visible";
+        info.style.left = "160px";
+        info.innerHTML = "Exit";
     });
     createChampListeners2();
 }
@@ -446,7 +457,6 @@ function createSelectorListeners() {
         changeSpell("Teleport");
         spellSelector.style.visibility = "hidden";
     });
-    updateCheck()
 }
 
 function changeSpell(spell) {
@@ -554,7 +564,20 @@ function changeSize(typ) {
 }
 
 function updateCheck() {
-    
+    //URL = https://api.github.com/repos/der0r0/sstimer/releases/latest
+    fetch("https://api.github.com/repos/der0r0/sstimer/releases/latest")
+        .then((response) => response.json())
+        .then((json) => {
+            if(json.tag_name == `v${currentVersion}`) {
+                console.log(`Up to Date. Current Version: v${currentVersion}`)
+                statusUpdate = `Up to Date (v${currentVersion})`
+                document.getElementById("updateImg").src = "./assets/updateGood.png";
+            } else {
+                console.log(`Update Needed. From version v${currentVersion} -> ${json.tag_name}`)
+                statusUpdate = `Update Needed (v${currentVersion} -> ${json.tag_name})`
+                document.getElementById("updateImg").src = "./assets/updateNeed.png";
+            }
+        })
 }
 
 
