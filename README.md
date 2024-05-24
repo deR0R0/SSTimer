@@ -18,4 +18,6 @@ Go to the issues tab on github and create an issue with the bug name as the titl
 
 # Changelog
 
-5/24/24 - v1.0.0 - RELEASE
+```5/24/24 - v1.0.0 - RELEASE```
+
+```5/24/24 - v1.1.0 - FEATURES (Added exit, and update checker)```
