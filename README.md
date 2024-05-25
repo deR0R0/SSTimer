@@ -21,3 +21,5 @@ Go to the issues tab on github and create an issue with the bug name as the titl
 ```5/24/24 - v1.0.0 - RELEASE```
 
 ```5/24/24 - v1.1.0 - FEATURES (Added exit, and update checker)```
+
+```5/25/24 - v1.1.1 - BUGFIX (Application Minimize after Fullscreen)```
