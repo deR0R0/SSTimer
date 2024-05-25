@@ -1,6 +1,6 @@
 const ipc = require("electron").ipcRenderer;
 
-const currentVersion = "1.1.0";
+const currentVersion = "1.1.1";
 var statusUpdate = "Checking for Updates..."
 
 var currentTime = "";
@@ -13,7 +13,7 @@ var spellCooldowns = {
     "Ghost": 240,
     "Heal": 240,
     "Ignite": 180,
-    "Smite-Cooldown": 90,  //should be 15 when impletmeented
+    "Smite": 90,  //should be 15 when impletmeented
     /*"Smite-Recharge": 90,*/
     "Teleport": 360
 }

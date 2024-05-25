@@ -21,7 +21,8 @@ function createMainWindow() {
         }
     });
     mainWindow.setFocusable(true);
-    mainWindow.setAlwaysOnTop(true);
+    mainWindow.setVisibleOnAllWorkspaces(true, {visibleOnFullScreen: true});
+    mainWindow.setAlwaysOnTop(true, 'screen-saver', 1);
     mainWindow.loadFile(path.join(__dirname, './renderer/index.html'));
 }
 //When ready, create the window
