@@ -39,7 +39,7 @@ body {
     position: absolute;
     color: black;
     top: 280px;
-    left: 40px;
+    left: 35px;
 }
 #increasesize {
     background-color: #FFFFFF;
@@ -48,7 +48,7 @@ body {
     position: absolute;
     color: black;
     top: 280px;
-    left: 80px;
+    left: 70px;
 }
 #decreasesize {
     background-color: #FFFFFF;
@@ -57,7 +57,19 @@ body {
     position: absolute;
     color: black;
     top: 280px;
-    left: 120px;
+    left: 105px;
+}
+#clear {
+    background-color: #FFFFFF;
+    border: solid #FFFFFF 3px;
+    border-radius: 5px;
+    position: absolute;
+    color: black;
+    top: 280px;
+    left: 140px;
+}
+#clear-image {
+    transition: 1s;
 }
 #exit {
     background-color: #FFFFFF;
@@ -66,7 +78,7 @@ body {
     position: absolute;
     color: black;
     top: 280px;
-    left: 160px;
+    left: 190px;
 }
 #info {
     background-color: #FFFFFF;
@@ -376,4 +388,7 @@ body {
     border-radius: 5px;
     background-color: #121212;
     flex: left;
+    width: 80px;
+    height: 230px;
+    overflow: scroll;
 }

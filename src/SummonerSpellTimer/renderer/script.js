@@ -1,6 +1,6 @@
 const ipc = require("electron").ipcRenderer;
 
-const currentVersion = "1.1.1";
+const currentVersion = "1.1.2";
 var statusUpdate = "Checking for Updates..."
 
 var currentTime = "";
@@ -90,8 +90,9 @@ const appMover = document.getElementById("dragarea");
 const updateStatus = document.getElementById("updatestatus");
 const sizeIncreaser = document.getElementById("increasesize");
 const sizeDecreaser = document.getElementById("decreasesize");
+const clearAll = document.getElementById("clear");
 const exitButton = document.getElementById("exit");
-const info = document.getElementById("info")
+const info = document.getElementById("info");
 
 var currentSelectedImg = null;
 
@@ -141,12 +142,15 @@ window.onload = function createChampListeners() {
     sizeDecreaser.addEventListener("mousedown", function() {
         changeSize("Decrease");
     });
+    clearAll.addEventListener("mousedown", function() {
+        clearAllFields();
+    });
     exitButton.addEventListener("mousedown", function() {
         ipc.send("close");
     });
 
     window.addEventListener("mousemove", function(event) {
-        if(event.target != updateStatus && event.target != appMover && event.target != sizeIncreaser && event.target != sizeDecreaser && event.target != exitButton) {
+        if(event.target != updateStatus && event.target != appMover && event.target != sizeIncreaser && event.target != sizeDecreaser && event.target != exitButton && event.target != clearAll) {
             info.style.visibility = "hidden";
         } 
     });
@@ -162,17 +166,22 @@ window.onload = function createChampListeners() {
     });
     sizeIncreaser.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
-        info.style.left = "70px";
+        info.style.left = "55px";
         info.innerHTML = "Zoom In";
     });
     sizeDecreaser.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
-        info.style.left = "100px";
+        info.style.left = "83px";
         info.innerHTML = "Zoom Out";
+    });
+    clearAll.addEventListener("mouseover", function() {
+        info.style.visibility = "visible";
+        info.style.left = "120px";
+        info.innerHTML = "Clear All";
     });
     exitButton.addEventListener("mouseover", function() {
         info.style.visibility = "visible";
-        info.style.left = "160px";
+        info.style.left = "185px";
         info.innerHTML = "Exit";
     });
     createChampListeners2();
@@ -544,9 +553,27 @@ function popupSpellSelector(coords, clickedImg) {
 }
 
 function moveSpellSelector(x, y) {
-    spellSelector.style.left = `${x}px`;
-    spellSelector.style.top = `${y}px`;
-    console.log(`Moved Selector (X): ${x}, (Y): ${y}`);
+    var x_coord = x;
+    var y_coord = y;
+    var height = 450;
+    //calc y and x for cutoff
+    if(x > 130) {
+        x_coord = 130;
+    }
+    if(height-y_coord-100 < 195) {
+        spellSelector.style.overflow = "scroll";
+        spellSelector.style.width = "90px";
+        height = height-y_coord-90;
+    } else {
+        spellSelector.style.overflow = "visible";
+        spellSelector.style.width = "75px";
+        height = 195;
+    }
+    //Calc height
+    spellSelector.style.height = `${height}px`
+    spellSelector.style.left = `${x_coord}px`;
+    spellSelector.style.top = `${y_coord}px`;
+    console.log(`Moved Selector (X): ${x_coord}, (Y): ${y_coord}`);
 }
 
 function changeSize(typ) {
@@ -561,6 +588,57 @@ function changeSize(typ) {
             root.style.setProperty("--scale-factor", parseFloat(parseFloat(currentSize) - 0.05));
         }
     }
+}
+
+//clear all inputs
+function clearAllFields() {
+    document.getElementById("clear-image").style.transform = "rotate(360deg)";
+    setTimeout(function() {
+        //rerotate
+        document.getElementById("clear-image").style.transform = "";
+    }, 1000);
+    //reset the counters
+    currentlyTiming = {
+        "Champ1Spell1": false,
+        "Champ1Spell2": false,
+        "Champ2Spell1": false,
+        "Champ2Spell2": false,
+        "Champ3Spell1": false,
+        "Champ3Spell2": false,
+        "Champ4Spell1": false,
+        "Champ4Spell2": false,
+        "Champ5Spell1": false,
+        "Champ5Spell2": false,
+    }
+    //reset the spells
+    champ1Spell1 = "Flash";
+    champ1Spell2 = "Ghost";
+    champ2Spell1 = "Flash";
+    champ2Spell2 = "Ghost";
+    champ3Spell1 = "Flash";
+    champ3Spell2 = "Ghost";
+    champ4Spell1 = "Flash";
+    champ4Spell2 = "Ghost";
+    champ5Spell1 = "Flash";
+    champ5Spell2 = "Ghost";
+    //Clear Images and reset their vars
+    champ1img1.src = "./assets/flash.png";
+    champ1img2.src = "./assets/ghost.png";
+    champ2img1.src = "./assets/flash.png";
+    champ2img2.src = "./assets/ghost.png";
+    champ3img1.src = "./assets/flash.png";
+    champ3img2.src = "./assets/ghost.png";
+    champ4img1.src = "./assets/flash.png";
+    champ4img2.src = "./assets/ghost.png";
+    champ5img1.src = "./assets/flash.png";
+    champ5img2.src = "./assets/ghost.png";
+    //Clear all champ text boxes
+    document.getElementById("champ1Text").value = "";
+    document.getElementById("champ2Text").value = "";
+    document.getElementById("champ3Text").value = "";
+    document.getElementById("champ4Text").value = "";
+    document.getElementById("champ5Text").value = "";
+    
 }
 
 function updateCheck() {

@@ -8,16 +8,16 @@ const isMac = process.platform === "darwin";
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: "SSTimer",
-        //Normal is 310x800
-        width: 310,
-        height: 800,
+        //Normal is 290x500
+        width: 270,
+        height: 460,
         resizable: false,
         frame: false,
         transparent: true,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            devTools: false
+            devTools: true
         }
     });
     mainWindow.setFocusable(true);
