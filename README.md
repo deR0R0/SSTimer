@@ -4,6 +4,10 @@ Helps you track champion's summoner spells. :D
 
 Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk size.
 
+# Status
+
+🟩 - Project Finished (Bugfixes will still happen)
+
 # Installation
 
 1. Download from releases (latest)
