@@ -6,7 +6,7 @@ Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk 
 
 # Status
 
-🟩 - Project Finished (Bugfixes will still happen)
+🟦 - Currently working on version 2.0.0! (Settings menu and auto detect matches)
 
 # Installation
 
