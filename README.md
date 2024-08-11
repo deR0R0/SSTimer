@@ -12,7 +12,7 @@ Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk 
 
 1. Download from releases (latest)
 2. Unzip the folder
-3. Run the application called ```SSTimer```
+3. Run the application called ```SSTimerV2```
 
 # Usage
 
@@ -22,7 +22,7 @@ Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk 
 
 Use the move tool to move the application around your screen.
 
-Use the zoom in and zoom out tool to fit your size preference.
+Open settings menu and change any of the settings inside there. (Settings will save!)
 
 Use the trash tool to clear everything
 
@@ -36,6 +36,7 @@ Go to the issues tab on github and create an issue with the bug name as the titl
 # Changelog
 
 ```5/24/24 - v1.0.0 - RELEASE```
+```8/11/24 - v2.0.0 - NEW VERSION, NEW FEATURES!```
 
 ```5/24/24 - v1.1.0 - FEATURES (Added exit, and update checker)```
 
