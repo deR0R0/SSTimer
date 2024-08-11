@@ -1,0 +1,16 @@
+{
+  "name": "sstimerv2",
+  "icon": "./renderer/assets/clock.png",
+  "productName": "SSTimer (v2)",
+  "version": "1.0.0",
+  "description": "Lightweight desktop app that allows users to track summoner spells in league of legends. Inspired by Porofessor.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "deR0R0",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^31.3.1"
+  }
+}

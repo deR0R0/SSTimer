@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./settings.js" defer></script>
+    <link rel="stylesheet" href="./settings.css">
+    <title>SSTimer (v2) Settings</title>
+</head>
+<body>
+    <div class="content">
+        <div class="settingsField">
+            <h3 id="zoominouttitle">Zoom In/Out</h3>
+            <img class="imgButton" src="../assets/zoom-in.svg" width="20">
+            <img class="imgButton" src="../assets/zoom-out.svg" width="20">
+        </div>
+        <div class="settingsField matchDetectButton">
+            <h3>Match Detector</h3>
+            <input id="match-detector-box" type="checkbox" checked="true">
+            <button id="match-detector-manual">Manual Fill</button>
+        </div>
+        <div class="settingsField flashBorderButton">
+            <h3>Flash Boundaries</h3>
+            <button id="flash-bounds">Flash</button>
+        </div>
+
+        <button id="save-settings">Save Settings</button>
+        
+    </div>
+</body>
+</html>
