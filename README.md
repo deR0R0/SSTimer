@@ -2,11 +2,11 @@
 
 Helps you track champion's summoner spells. :D
 
-Low memory (compared to porofessor) usage. ~60mb of RAM needed. And 260 mb disk size.
+Low memory (compared to porofessor) usage. ~100mb of RAM needed. And 260 mb disk size.
 
 # Status
 
-🟦 - Currently working on version 2.0.0! (Settings menu and auto detect matches)
+🟢 - Done!
 
 # Installation
 
@@ -47,3 +47,5 @@ Go to the issues tab on github and create an issue with the bug name as the titl
 - Auto match detect
 - Lowered amount of screen usage
 - A ton more!
+
+```8/12/24 - v2.0.1 - BUGFIX (If you spawned top side, the app will fill in you and your teammates' spells rather than the enemies lol)```
