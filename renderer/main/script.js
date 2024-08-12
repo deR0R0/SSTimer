@@ -2,7 +2,7 @@
 const ipc = window.elecApi;
 
 // VERSION
-const _VERSION_ = "2.0.0";
+const _VERSION_ = "2.0.1";
 
 
 // Elements
@@ -422,13 +422,29 @@ function checkMatch(popup) {
         .then((response) => response.json())
         .then(playerdata => {
             try {
+                currentPlayerTopSide = false;
+                currentPlayer = playerdata.activePlayer.riotId
                 for(let i=0; i<5; i++) {
-                    playerName = playerdata.allPlayers[i+5].championName;
+                    if(playerdata.allPlayers[i].riotId != currentPlayer) {
+                        currentPlayerTopSide = true;
+                    }
+                }
+                for(let i=0; i<5; i++) {
+                    if(currentPlayerTopSide) {
+                        playerName = playerdata.allPlayers[i].championName;
+                    } else {
+                        playerName = playerdata.allPlayers[i+5].championName;
+                    }
+                    
                     championName[i].value = playerName
                 }
                 for(let i=0; i<10; i+=2) {
                     x = i / 2
-                    playerSummonerSpells = playerdata.allPlayers[x+5].summonerSpells;
+                    if(currentPlayerTopSide) {
+                        playerSummonerSpells = playerdata.allPlayers[x].summonerSpells;
+                    } else {
+                        playerSummonerSpells = playerdata.allPlayers[x+5].summonerSpells;
+                    }
                     championImgs[i].src = `https://ddragon.leagueoflegends.com/cdn/14.15.1/img/spell/${spellIGNToCodeName[playerSummonerSpells.summonerSpellOne.displayName]}.png`
                     championImgs[i+1].src = `https://ddragon.leagueoflegends.com/cdn/14.15.1/img/spell/${spellIGNToCodeName[playerSummonerSpells.summonerSpellTwo.displayName]}.png`
                     selectedSpellImgs[i] = spellDir[championImgs[i].src]
