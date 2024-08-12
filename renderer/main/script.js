@@ -2,7 +2,7 @@
 const ipc = window.elecApi;
 
 // VERSION
-const _VERSION_ = "2.0.1";
+const _VERSION_ = "2.0.2";
 
 
 // Elements
