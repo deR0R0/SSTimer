@@ -6,6 +6,8 @@ Low memory (compared to porofessor) usage. ~100mb of RAM needed. And 260 mb disk
 
 # Status
 
+Probably broken right now... will fix in about 3 business years!
+
 🟢 - Done!
 
 # Installation
