@@ -2,7 +2,7 @@
 const ipc = window.elecApi;
 
 // VERSION
-const _VERSION_ = "2.0.2";
+const _VERSION_ = "2.0.3";
 
 
 // Elements
@@ -46,6 +46,7 @@ var spellIGNToCodeName = {
     "Ghost": "SummonerHaste",
     "Heal": "SummonerHeal",
     "Teleport": "SummonerTeleport",
+    "Unleashed Teleport": "SummonerTeleport",
     "Smite": "SummonerSmite"
 }
 var spellDir = {
@@ -422,15 +423,20 @@ function checkMatch(popup) {
         .then((response) => response.json())
         .then(playerdata => {
             try {
-                currentPlayerTopSide = false;
+                currentPlayerBotSide = false;
                 currentPlayer = playerdata.activePlayer.riotId
+                // i couldn't tell you whats going on if i knew
                 for(let i=0; i<5; i++) {
-                    if(playerdata.allPlayers[i].riotId != currentPlayer) {
-                        currentPlayerTopSide = true;
+                    console.log(playerdata.allPlayers[i].riotId)
+                    console.log(currentPlayer)
+                    if(playerdata.allPlayers[i].riotId == currentPlayer) {
+                        currentPlayerBotSide = true;
+                        break;
                     }
                 }
+                console.log("-------")
                 for(let i=0; i<5; i++) {
-                    if(currentPlayerTopSide) {
+                    if(!currentPlayerBotSide) {
                         playerName = playerdata.allPlayers[i].championName;
                     } else {
                         playerName = playerdata.allPlayers[i+5].championName;
@@ -440,7 +446,7 @@ function checkMatch(popup) {
                 }
                 for(let i=0; i<10; i+=2) {
                     x = i / 2
-                    if(currentPlayerTopSide) {
+                    if(!currentPlayerBotSide) {
                         playerSummonerSpells = playerdata.allPlayers[x].summonerSpells;
                     } else {
                         playerSummonerSpells = playerdata.allPlayers[x+5].summonerSpells;

@@ -6,9 +6,9 @@ var matchDetect;
 
 
 const isMac = process.platform === "darwin";
-
+// Default 270x360
 const mainWidth = 270;
-const mainHeight = 370;
+const mainHeight = 360;
 
 var data = {
     "zoomLevel": 1,
@@ -49,6 +49,7 @@ function createMainWindow(width, height, dev) {
         mainWindow.webContents.send("message", data);
         //console.log("Sending packet of data to main window...")
     }, 100)
+    mainWindow.webContents.openDevTools()
     mainWindow.on("closed", () => {
         app.quit();
     })
@@ -167,7 +168,7 @@ app.whenReady().then(() => {
     // Create settings window
     ipcMain.handle("settingsWindow", () => {
         if(BrowserWindow.getAllWindows().length < 2) {
-            createSettingsWindow(500, 500, true);
+            createSettingsWindow(500, 500, false);
             console.log("Created a settings window!")
         } else {
             console.warn("User attempted to create another settings window but a settings window is already open.");
