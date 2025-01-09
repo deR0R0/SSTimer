@@ -7,7 +7,7 @@ var matchDetect;
 
 const isMac = process.platform === "darwin";
 // Default 270x360
-const mainWidth = 700;
+const mainWidth = 270;
 const mainHeight = 360;
 
 var data = {
@@ -154,7 +154,7 @@ app.whenReady().then(() => {
     data['message:matchDetect'] = "none";
     data['message:saveSettings'] = "none";
     // Create the main window (where the summoner spells will be)
-    createMainWindow(mainWidth, mainHeight, true);
+    createMainWindow(mainWidth, mainHeight, false);
 
     // Remove ugly menu for windows
     Menu.setApplicationMenu(null);

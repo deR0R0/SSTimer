@@ -2,7 +2,7 @@
 const ipc = window.elecApi;
 
 // VERSION AND PATH
-const _VERSION_ = "2.0.4";
+const _VERSION_ = "2.0.5";
 const path = window.location.pathname.replace("main/index.html", "")
 
 // Elements
