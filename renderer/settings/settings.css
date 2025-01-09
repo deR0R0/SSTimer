@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    background-color: #181818;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.settingsField * {
+    display: block;
+}
+
+.settingsField h3 {
+    color: white;
+}
+
+.settingsField img {
+    display: inline;
+    background-color: #FFFFFF;
+    border: solid #FFFFFF 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settingsField input[type=checkbox] {
+    display: inline;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+}
+
+.matchDetectButton button {
+    display: inline;
+    width: fit-content;
+    height: 25px;
+    margin-top: 0;
+    background-color: #0075ff;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.flashBorderButton button {
+    display: inline;
+    width: fit-content;
+    height: 25px;
+    margin-top: 0;
+    background-color: #0075ff;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.sliderField {
+    position: block;
+}
+
+#save-settings {
+    position: absolute;
+    top: 93%;
+    background-color: #FFFFFF;
+    border: solid #FFFFFF 5px;
+    border-radius: 15px;
+    transition: 500ms;
+}
+
+#save-settings:hover {
+    background-color: #DEDEDE;
+    border-color: #DEDEDE;
+    border-radius: 10px;
+}
+

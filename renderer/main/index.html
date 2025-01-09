@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>SSTimer (v2)</title>
+</head>
+<body>
+    <div class="content">
+        <div class="champion-div no-highlight">
+            <input type="text" class="champion-div-names" maxlength="15">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <span style="top: 5vh; right: 24.5vw" class="champion-div-ps no-highlight">000</span>
+            <span style="top: 5vh; right: 4.5vw" class="champion-div-ps no-highlight">000</span>
+        </div>
+        <div class="champion-div no-highlight">
+            <input type="text" class="champion-div-names" maxlength="15">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <span style="top: 20.5vh; right: 24.5vw" class="champion-div-ps no-highlight">000</span>
+            <span style="top: 20.5vh; right: 4.5vw" class="champion-div-ps no-highlight">000</span>
+        </div>
+        <div class="champion-div no-highlight">
+            <input type="text" class="champion-div-names" maxlength="15">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <span style="top: 35.5vh; right: 24.5vw" class="champion-div-ps no-highlight">000</span>
+            <span style="top: 35.5vh; right: 4.5vw" class="champion-div-ps no-highlight">000</span>
+        </div>
+        <div class="champion-div no-highlight">
+            <input type="text" class="champion-div-names" maxlength="15">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <span style="top: 51vh; right: 24.5vw" class="champion-div-ps no-highlight">000</span>
+            <span style="top: 51vh; right: 4.5vw" class="champion-div-ps no-highlight">000</span>
+        </div>
+        <div class="champion-div no-highlight">
+            <input type="text" class="champion-div-names" maxlength="15">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="champion-div-imgs" width="40" draggable="false">
+            <span style="top: 66.5vh; right: 24.5vw" class="champion-div-ps no-highlight">000</span>
+            <span style="top: 66.5vh; right: 4.5vw" class="champion-div-ps no-highlight">000</span>
+        </div>
+        <!--Toolbar-->
+        <div class="toolbox no-highlight">
+            <img id="dragtool" src="../assets/drag.svg" width="30">
+            <img id="updatetool" src="../assets/reset.svg" width="30">
+            <img id="trashtool" src="../assets/trash.svg" width="30">
+            <img id="settingstool" src="../assets/gear.svg" width="30">
+            <img id="exittool" src="../assets/exit.svg" width="30">
+            <span id="toolboxTip">Tool Box</span>
+        </div>
+        <!--Spell Selector-->
+        <div class="spell-selector spell-selector-div">
+            <span class="triangle-indicator"></span>
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <img src="../assets/unknown.png" class="spell-selector-spells no-highlight" width="40" draggable="false">
+            <svg class="spell-selector-spells no-highlight x" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="15" y1="9" x2="9" y2="15" />
+                <line x1="9" y1="9" x2="15" y2="15" />
+            </svg>
+
+        </div>
+    </div>
+     <!--Border Flash-->
+    <div id="flash"></div>
+    <!--Popup Message-->
+    <div class="user-popup-message">Loren Ipsum</div>
+</body>
+</html>
