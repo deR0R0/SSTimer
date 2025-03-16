@@ -1,5 +1,8 @@
 # SSTimer
 
+> [!IMPORTANT]
+> As of March 13, 2025, riot stopped allowing the use of ultimate timers. While this doesn't affect SSTimer, please use this app with caution. There is no way in knowing whether or not summoner spell timers will be prohibited.
+
 Helps you track champion's summoner spells. :D
 
 Low memory (compared to porofessor) usage. ~100mb of RAM needed. And 260 mb disk size.
@@ -52,3 +55,8 @@ Go to the issues tab on github and create an issue with the bug name as the titl
 
 ```8/12/24 - v2.0.1 - BUGFIX (If you spawned top side, the app will fill in you and your teammates' spells rather than the enemies lol)```
 ```10-5-24 - v2.0.3 - BUGFIX + FEATURE (Fixed top/bot side glitch and fixed the unleashed teleport bug. Added mac support)```
+
+
+
+
+SSTimer isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
